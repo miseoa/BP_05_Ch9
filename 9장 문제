@@ -1,11 +1,11 @@
 1번
 for i in range(5):
     i=int(input("정수를 입력하시오:"))
-    alist.append(i)
+    alist.append(i) #리스트에 정수 값 추가
 for i in alist:
     sum+=i
-avg=sum/len(alist)
-print("평균=",avg)
+avg=sum/len(alist) #평균을 구하는 식
+print("평균=",avg) #평균을 프린트
         
 정수를 입력하시오:10
 정수를 입력하시오:20
@@ -16,11 +16,11 @@ print("평균=",avg)
 
 2번
 import random
-counters=[0,0,0,0,0,0]
+counters=[0,0,0,0,0,0] #리스트 생성
 
-for i in range(1000):
-    value=random.randint(0,5)
-    counters[value]=counters[value]+1
+for i in range(1000): #반복문 1000번 반복
+    value=random.randint(0,5) #0에서 5까지 무작위 수 지정
+    counters[value]=counters[value]+1 #생성된 숫자 카운트
 
     
 for i in range(6):
@@ -70,13 +70,13 @@ import random
 t=turtle.Turtle()
 t.shape("turtle")
 
-def draw_square(x,y,c):
+def draw_square(x,y,c): 
     t.up()
     t.goto(x,y)
     t.down()
     t.color("black",c)
     t.begin_fill()
-    t.forward(100)
+    t.forward(100) #사각형 그리기
     t.left(90)
     t.forward(100)
     t.left(90)
@@ -87,7 +87,7 @@ def draw_square(x,y,c):
     t.end_fill()
 
     
-for c in ["yellow","red","purple","blue"]:
+for c in ["yellow","red","purple","blue"]: #리스트에 저장된 색이 순서대로 표현
     x=random.randint(-100,100)
     y=random.randint(-100,100)
     draw_square(x,y,c)
@@ -98,11 +98,11 @@ import random
 
 t=turtle.Turtle()
 s=turtle.Screen()
-def draw_shape(t,c,length,sides,x,y):
+def draw_shape(t,c,length,sides,x,y): #함수정의
     t.up()
-    t.goto(x,y)
+    t.goto(x,y) #좌표이동
     t.down()
-    t.fillcolor(c)
+    t.fillcolor(c) #색선정
     angle=360.0/sides
     t.begin_fill()
     for dist in range(sides):
@@ -111,8 +111,8 @@ def draw_shape(t,c,length,sides,x,y):
     t.end_fill()
 
     
-for i in range(10):
-    color=random.choice(["white","yellow","blue","skyblue","orange","green"])
+for i in range(10): #도형그리기
+    color=random.choice(["white","yellow","blue","skyblue","orange","green"]) #색 리스트
     side_length=random.randint(10,100)
     sides=random.randint(3,10)
     x=random.randint(-200,200)
@@ -140,12 +140,12 @@ def draw_star(aturtle, colour, side_length, x, y):
     aturtle.end_fill()
 
     
-for i in range(20):
-    color=random.choice(["white","yellow","blue","skyblue","orange","green"])
+for i in range(20): #별20개 그리기
+    color=random.choice(["white","yellow","blue","skyblue","orange","green"]) #색 리스트
     side_length=random.randint(10,100)
-    x=random.randint(-200,200)
+    x=random.randint(-200,200) #랜던 좌표및 길이 랜덤으로 지정
     y=random.randint(-200,200)
-    draw_star(t,color,side_length,x,y)
+    draw_star(t,color,side_length,x,y) #star함수 실행
 
 7번
 domains={"kr":"대한민국","us":"미국","jp":"일본","de":"독일","sk":"슬로바키아","hu":"헝가리","no":"노르웨이"}
